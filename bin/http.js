@@ -13,6 +13,9 @@ module.exports = function (options) {
     callback_get = options.get;
 };
 
+/**
+ * Creates end point.
+ */
 var server = http.createServer(function (request, response) {
     if (util.isRequestValid(request.url)) {
         var cmd = util.parseRequest(request.url);
@@ -34,6 +37,10 @@ var server = http.createServer(function (request, response) {
 
 }).listen(port);
 
+/**
+ * Returns 404 page.
+ * @param response
+ */
 function return404(response) {
     response.writeHead(404);
     response.end('Wrong request!');

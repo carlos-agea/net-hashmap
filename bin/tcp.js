@@ -14,6 +14,9 @@ module.exports = function (options) {
     callback_get = options.get;
 };
 
+/**
+ * Creates end point.
+ */
 var server = net.createServer(function (socket) {
     socket.on('data', function (data) {
         var request = UTF8.getStringFromBytes(data);

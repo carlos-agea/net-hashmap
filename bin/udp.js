@@ -15,11 +15,17 @@ module.exports = function (options) {
     callback_get = options.get;
 };
 
+/**
+ * Creates end point.
+ */
 server.on("listening", function () {
     var address = server.address();
     console.log("UDP server is listening on port " + address.port);
 });
 
+/**
+ * Handler on message receive.
+ */
 server.on("message", function (msg, rinfo) {
     var request = UTF8.getStringFromBytes(msg);
 
@@ -44,11 +50,17 @@ server.on("message", function (msg, rinfo) {
 
 });
 
+/**
+ * Handler on error.
+ */
 server.on("error", function (err) {
     console.log("UDP server error: \n" + err.stack);
     server.close();
 });
 
+/**
+ * Handler on connexion close.
+ */
 server.on("close", function () {
     console.log("UDP server closed.");
 });
