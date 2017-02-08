@@ -8,11 +8,13 @@ var port = 8000;
 var callback_set = null;
 var callback_get = null;
 var callback_has = null;
+var callback_remove = null;
 
 module.exports = function (options) {
     callback_set = options.set;
     callback_get = options.get;
     callback_has = options.has;
+    callback_remove = options.remove;
 };
 
 /**
@@ -36,6 +38,11 @@ var server = http.createServer(function (request, response) {
             response.writeHead(200);
             var value = callback_has(cmd.key);
             response.end(value.toString());
+        }
+        else if (cmd.operation === 'remove') {
+            response.writeHead(200);
+            var value = callback_remove(cmd.key);
+            response.end('Remvoed ' + cmd.key);
         }
     }
     else {

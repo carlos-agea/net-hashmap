@@ -21,9 +21,18 @@ exports.get = function (key) {
 
 /**
  * Check if element exists.
- * @param key key to check.
+ * @param key element key to check.
  * @returns {*} true if key exists, false otherwise
  */
 exports.has = function (key) {
     return map.has(key);
+}
+
+/**
+ * Remove an element.
+ * @param key element key to remove.
+ * @returns {*}
+ */
+exports.remove = function (key) {
+    return map.remove(key);
 }

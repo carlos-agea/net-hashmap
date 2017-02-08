@@ -10,11 +10,13 @@ var port = 4000;
 var callback_set = null;
 var callback_get = null;
 var callback_has = null;
+var callback_remove = null;
 
 module.exports = function (options) {
     callback_set = options.set;
     callback_get = options.get;
     callback_has = options.has;
+    callback_remove = options.remove;
 };
 
 /**
@@ -47,6 +49,11 @@ server.on("message", function (msg, rinfo) {
         else if (cmd.operation === 'has') {
             var value = callback_has(cmd.key);
             var response = value.toString();
+            server.send(response, 0, response.length, rinfo.port, rinfo.address);
+        }
+        else if (cmd.operation === 'remove') {
+            var value = callback_remove(cmd.key);
+            var response = "Removed " + cmd.key;
             server.send(response, 0, response.length, rinfo.port, rinfo.address);
         }
     }

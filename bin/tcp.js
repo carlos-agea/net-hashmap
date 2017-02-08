@@ -9,11 +9,13 @@ var port = 3000;
 var callback_set = null;
 var callback_get = null;
 var callback_has = null;
+var callback_remove = null;
 
 module.exports = function (options) {
     callback_set = options.set;
     callback_get = options.get;
     callback_has = options.has;
+    callback_remove = options.remove;
 };
 
 /**
@@ -28,7 +30,7 @@ var server = net.createServer(function (socket) {
 
             if (cmd.operation === 'set') {
                 callback_set(cmd.key, cmd.value);
-                socket.write("Saved " + cmd.key + "=" + cmd.value);
+                socket.write('Saved ' + cmd.key + "=" + cmd.value);
             }
             else if (cmd.operation === 'get') {
                 var value = callback_get(cmd.key);
@@ -37,6 +39,10 @@ var server = net.createServer(function (socket) {
             else if (cmd.operation === 'has') {
                 var value = callback_has(cmd.key);
                 socket.write(value.toString());
+            }
+            else if (cmd.operation === 'remove') {
+                var value = callback_remove(cmd.key);
+                socket.write('Removed ' + cmd.key);
             }
         }
         else {
