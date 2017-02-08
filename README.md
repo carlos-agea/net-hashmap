@@ -1,6 +1,6 @@
 # net-hashmap
 In-memory key value store. The store supports data storage and retrieval through TCP, UDP, and http REST interfaces. 
-
+The operations set, get, has and remove are supported.
 #HTTP
 ```
 http://localhost:8000/set/name=carlos

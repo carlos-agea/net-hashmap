@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7478cd-1433-4170-919c-27ed0d97f5f9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/http.js" afterPath="$PROJECT_DIR$/bin/http.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/store.js" afterPath="$PROJECT_DIR$/bin/store.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/tcp.js" afterPath="$PROJECT_DIR$/bin/tcp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/udp.js" afterPath="$PROJECT_DIR$/bin/udp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/util.js" afterPath="$PROJECT_DIR$/bin/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,12 +74,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <first_editor relative-caret-position="165">
+                <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -101,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/store.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
@@ -133,13 +129,13 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/bin/util.js" />
         <option value="$PROJECT_DIR$/bin/tcp.js" />
         <option value="$PROJECT_DIR$/bin/http.js" />
         <option value="$PROJECT_DIR$/bin/udp.js" />
         <option value="$PROJECT_DIR$/bin/store.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -629,12 +625,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486505464452</updated>
       <workItem from="1486505480074" duration="5340000" />
-      <workItem from="1486582842251" duration="11179000" />
+      <workItem from="1486582842251" duration="11319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16519000" />
+    <option name="totallyTimeSpent" value="16659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -740,17 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -802,6 +787,17 @@
         <state relative-caret-position="282">
           <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
