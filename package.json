@@ -7,6 +7,9 @@
   },
   "dependencies": {
     "http": "0.0.0",
-    "hashmap": "2.0.6"
+    "hashmap": "2.0.6",
+    "net": "1.0.2",
+    "utf-8": "1.0.0"
+
   }
 }
