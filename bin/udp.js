@@ -9,10 +9,12 @@ var util = require('./util');
 var port = 4000;
 var callback_set = null;
 var callback_get = null;
+var callback_has = null;
 
 module.exports = function (options) {
     callback_set = options.set;
     callback_get = options.get;
+    callback_has = options.has;
 };
 
 /**
@@ -40,6 +42,11 @@ server.on("message", function (msg, rinfo) {
         else if (cmd.operation === 'get') {
             var value = callback_get(cmd.key);
             var response = cmd.key + '=' + value;
+            server.send(response, 0, response.length, rinfo.port, rinfo.address);
+        }
+        else if (cmd.operation === 'has') {
+            var value = callback_has(cmd.key);
+            var response = value.toString();
             server.send(response, 0, response.length, rinfo.port, rinfo.address);
         }
     }

@@ -18,3 +18,12 @@ exports.set = function (key, value) {
 exports.get = function (key) {
     return map.get(key);
 }
+
+/**
+ * Check if element exists.
+ * @param key key to check.
+ * @returns {*} true if key exists, false otherwise
+ */
+exports.has = function (key) {
+    return map.has(key);
+}

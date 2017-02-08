@@ -2,7 +2,7 @@
  * Created by carlos on 2/8/17.
  */
 // regex to parse request like "/set/name=carlos" or "/get/name"
-var dataRegex = /^\/(get|set){1}\/([a-zA-Z]+)=*([a-zA-Z0-9]+)*(.*)/;
+var dataRegex = /^\/(get|set|has){1}\/([a-zA-Z]+)=*([a-zA-Z0-9]+)*(.*)/;
 
 /**
  * Check if the request is not null and has 4 or 5 parameters.
@@ -38,6 +38,9 @@ function parseRequest(request) {
             returnObj.value = match[3].toString();
         }
         else if (returnObj.operation === 'get') {
+            returnObj.key = match[2].toString();
+        }
+        else if (returnObj.operation === 'has') {
             returnObj.key = match[2].toString();
         }
     }

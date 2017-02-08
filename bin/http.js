@@ -7,10 +7,12 @@ var util = require('./util');
 var port = 8000;
 var callback_set = null;
 var callback_get = null;
+var callback_has = null;
 
 module.exports = function (options) {
     callback_set = options.set;
     callback_get = options.get;
+    callback_has = options.has;
 };
 
 /**
@@ -29,6 +31,11 @@ var server = http.createServer(function (request, response) {
             response.writeHead(200);
             var value = callback_get(cmd.key);
             response.end(cmd.key + '=' + value);
+        }
+        else if (cmd.operation === 'has') {
+            response.writeHead(200);
+            var value = callback_has(cmd.key);
+            response.end(value.toString());
         }
     }
     else {
