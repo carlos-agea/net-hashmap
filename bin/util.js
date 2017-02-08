@@ -28,9 +28,9 @@ function isRequestValid(request) {
 function parseRequest(request) {
     var match = request.match(dataRegex);
     var returnObj = {
-        "operation":"",
-        "key":"",
-        "value":""
+        "operation": "",
+        "key": "",
+        "value": ""
     };
 
     if (isRequestValid(request)) {
@@ -48,7 +48,6 @@ function parseRequest(request) {
 
     return returnObj;
 };
-
 
 exports.isRequestValid = isRequestValid;
 exports.parseRequest = parseRequest;
